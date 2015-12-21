@@ -1,0 +1,40 @@
+body {
+    padding:30px;
+    font:normal 12px/1.5 Arial, sans-serif;
+}
+.field-tip {
+    position:relative;
+    cursor:help;
+}
+.field-tip .tip-content {
+    position:absolute;
+    top:-6px;
+    right:9999px;
+    min-width:120px;
+    margin-right:-130px; 
+    padding:4px 8px;
+    color:#fff;
+    background:#333;
+    text-align: center;
+    opacity:0;
+    -webkit-transition:opacity 250ms ease-out;
+    -moz-transition:opacity 250ms ease-out;
+    -ms-transition:opacity 250ms ease-out;
+    -o-transition:opacity 250ms ease-out;
+    transition:opacity 250ms ease-out;
+}
+.field-tip .tip-content:before {
+    content:' ';
+    position:absolute;
+    top:50%;
+    left:-19px;
+    width:0;
+    height:0;
+    margin-top:-10px; 
+    border:10px solid transparent;
+    border-right-color:#333;
+}
+.field-tip:hover .tip-content {
+    right:-20px;
+    opacity:1;
+}
